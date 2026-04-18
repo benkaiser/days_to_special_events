@@ -18,6 +18,7 @@ class DaysToSpecialEventsApp extends StatelessWidget {
         brightness: Brightness.dark,
         useMaterial3: true,
         colorSchemeSeed: Colors.purple,
+        fontFamily: 'Roboto',
       ),
       home: const HomeScreen(),
     );

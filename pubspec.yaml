@@ -23,3 +23,7 @@ flutter:
   assets:
     - assets/images/
     - assets/videos/
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto.ttf
