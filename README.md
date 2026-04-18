@@ -57,7 +57,11 @@ flutter build apk --debug
 
 ## Screenshots
 
-The original wireframes drawn by Penelope:
+| Today's view | Start of year with special events |
+|---|---|
+| ![Home screen](test/goldens/home_screen.png) | ![Top of year](test/goldens/top_of_year.png) |
+
+### Penelope's original wireframes
 
 | Main screen design | Special event cards |
 |---|---|
