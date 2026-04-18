@@ -57,18 +57,20 @@ class _DayChipState extends State<DayChip> with SingleTickerProviderStateMixin {
             decoration: BoxDecoration(
               color: isTicked
                   ? AppState.availableColors[tickColorIndex!].withValues(alpha: 0.3)
-                  : Colors.white.withValues(alpha: 0.15),
+                  : (canTick
+                      ? Colors.white.withValues(alpha: 0.08)
+                      : Colors.white.withValues(alpha: 0.15)),
               borderRadius: BorderRadius.circular(12),
               border: Border.all(
                 color: _getBorderColor(canTick, isTicked, isToday, tickColorIndex),
-                width: (canTick && !isTicked) ? 2.5 : (isToday ? 2.5 : 1.5),
+                width: (canTick && !isTicked) ? 2 : (isToday ? 2.5 : 1.5),
               ),
               boxShadow: (canTick && !isTicked)
                   ? [
                       BoxShadow(
-                        color: _getGoldShimmer(),
-                        blurRadius: 8,
-                        spreadRadius: 1,
+                        color: _getGoldShimmer().withValues(alpha: 0.3),
+                        blurRadius: 4,
+                        spreadRadius: 0,
                       )
                     ]
                   : null,
